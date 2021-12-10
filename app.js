@@ -34,6 +34,6 @@ mongoose.connect("mongodb://localhost/eshop-database")
 .catch((err)=> {
   console.log(err);
 })
-const PORT = 5000;
+const PORT = process.env.PORT;
 // server
 app.listen(PORT,()=>console.log(`server running on http://localhost:${PORT}/api/v1/products/`));
